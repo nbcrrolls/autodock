@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="no"?>
+
+<kickstart>
+
+	<description>
+	Autodock and related programs developed at TSRI 
+	</description>
+
+	<copyright>
+	Copyright (c) 2000 - 2008 The Regents of the University of California.
+        All rights reserved.
+	</copyright>
+
+	<changelog>
+	
+	</changelog>
+
+	<package>autodock</package>
+	<package>rocks-autodock</package>
+        <package>autodock-vina</package>
+
+</kickstart>

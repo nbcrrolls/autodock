@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="no"?>
+
+<graph>
+
+	<description>
+
+	The Autodock Roll
+
+	</description>
+
+	<copyright>
+        Copyright (c) 2000 - 2008 The Regents of the University of California.
+        All rights reserved.
+	</copyright>
+
+	<changelog>
+	
+	</changelog>
+
+	<edge from="server" to="autodock-server"/>
+	<edge from="client" to="autodock-client"/>
+
+</graph>
+
+

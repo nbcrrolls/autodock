@@ -1,0 +1,126 @@
+<chapter id="installing" xreflabel="Installing">
+<title>Installing Autodock</title>
+
+<section id="adding-the-roll" xreflabel="Autodock Roll onto a Rocks System">
+<title>Autodock Roll onto a Rocks System</title>
+
+<para>
+The Autodock roll will install Autodock / Autogrid executables along with
+some examples in <filename>/opt/mgl</filename>.
+</para>
+
+<para>
+The Autodock Roll can be installed during the Frontend installation step
+of your cluster.  In addition, it can be installed onto a running Rocks system.
+</para>
+
+<para>
+The Autodock Roll is added to a Frontend installation in exactly the same
+manner as other rolls.  Specifically, after the HPC Roll is
+added the installer will once again ask if you have a Roll (see
+below).  Select 'Yes' and insert the Autodock Roll.
+<screenshot>
+	<graphic fileref="images/i-01.png" scale=50></graphic>
+</screenshot>
+</para>
+
+<para>
+You may install the @SOFTWARE_NAME@ roll onto a running Rocks Frontend by running the following commands for Rocks 5.0 or older.
+</para>
+
+<orderedlist numeration="arabic">
+<listitem><para><command>su - root</command></para></listitem>
+<listitem><para><command>mount -o loop @SOFTWARE_NAME@_rollname.iso /mnt/cdrom</command></para></listitem>
+<listitem><para><command>cd /home/install</command></para></listitem>
+<listitem><para><command>rocks-dist --install copyroll</command></para></listitem>
+<listitem><para><command>umount /mnt/cdrom</command></para></listitem>
+<listitem><para><command>rocks-dist dist</command></para></listitem>
+<listitem><para><command>kroll @SOFTWARE_NAME@ > /tmp/@SOFTWARE_NAME@-inst.sh</command></para></listitem>
+<listitem><para><command>sh /tmp/@SOFTWARE_NAME@-inst.sh</command></para></listitem>
+</orderedlist>
+
+<para>
+And the following command for Rocks 5.1 or newer.
+</para>
+
+<orderedlist numeration="arabic">
+<listitem><para><command>su - root</command></para></listitem>
+<listitem><para><command>rocks add roll @SOFTWARE_NAME@_rollname.iso clean=y</command></para></listitem>
+<listitem><para><command>cd /export/rocks/install</command></para></listitem>
+<listitem><para><command>rocks enable roll autodock</command></para></listitem>
+<listitem><para><command>rocks create distro</command></para></listitem>
+<listitem><para><command>kroll @SOFTWARE_NAME@ > /tmp/@SOFTWARE_NAME@-inst.sh</command></para></listitem>
+<listitem><para><command>sh /tmp/@SOFTWARE_NAME@-inst.sh</command></para></listitem>
+</orderedlist>
+
+<para>
+To install the @SOFTWARE_NAME@ roll on compute nodes, see the Adding Packages to Compute Nodes setion of the 
+<ulink url="http://www.rocksclusters.org/roll-documentation/base/5.0/customization-adding-packages.html">Rocks 5.0</ulink> or
+<ulink url="http://www.rocksclusters.org/roll-documentation/base/5.1/customization-adding-packages.html">Rocks 5.1</ulink> Users Guide.
+In particular, you should add the following packages to the compute nodes.
+</para>
+
+<itemizedlist>
+<listitem><para>
+autodock
+</para></listitem>
+<listitem><para>
+autogrid
+</para></listitem>
+</itemizedlist>
+
+<para>
+On Rocks 5.0, these RPMs are located in 
+<screen>
+/home/install/rolls/@SOFTWARE_NAME@/5.0/$arch/RedHat/RPM
+</screen>
+</para>
+
+<para>
+On Rocks 5.1, these RPMs are located in 
+<screen>
+/export/rocks/install/rolls/@SOFTWARE_NAME@/5.0/$arch/RedHat/RPM
+</screen>
+</para>
+
+</section>
+
+<section id="install_source" xreflabel="Installing from Autodock Source Code">
+<title>Source Code on Linux/Mac</title>
+
+<orderedlist numeration="arabic">
+  <listitem><para><command>tar zxvf autodocksuite-4.0.1-src.tar.gz</command></para></listitem>
+  <listitem><para><command>cd $autodocksuite_home/src/autodock-4.0.1</command></para></listitem>
+  <listitem><para><command>./configure --prefix=$optional_install_dir</command></para></listitem>
+  <listitem><para><command>make; make install</command></para></listitem>
+  <listitem><para><command>cd $autodocksuite_home/src/autogrid-4.0.0</command></para></listitem>
+  <listitem><para><command>./configure --prefix=$optional_install_dir</command></para></listitem>
+  <listitem><para><command>make; make install</command></para></listitem>
+</orderedlist>
+
+</section>
+
+<section id="install_linuxbin" xreflabel="Installing Autodock Using Linux/Mac Binaries">
+<title>Precompiled Linux/Mac Binaries</title>
+
+<para>
+Simply untar the tarball to get the executables.
+</para>
+
+<para><command>tar zxvf $autodocksuite-4.0.1-arch.tar.gz</command></para>
+
+</section>
+
+<section id="install_winbin" xreflabel="Installing Autodock Using Tarball on Windows">
+<title>Precompiled Windows Binaries</title>
+
+<para>
+Inside Cygwin, simply untar the tarball to get the executables.
+</para>
+
+<para><command>tar zxvf $autodocksuite-4.0.1-i86Cygwin.tar.gz</command></para>
+
+</section>
+
+
+</chapter>
