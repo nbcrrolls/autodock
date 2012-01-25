@@ -51,7 +51,7 @@
 #
 # @Copyright@
 
-PKGROOT = /opt/mgl/
+PKGROOT = /opt/opal/
 
 REDHAT.ROOT = $(PWD)/../../
 -include $(ROCKSROOT)/etc/Rules.mk
@@ -61,8 +61,8 @@ version.mk: version.mk.in
 	cat version.mk.in ../version.mk > version.mk
 
 install::
-	mkdir -p $(ROOT)/$(PKGROOT)/opal
-	install -m755  auto*_config.xml $(ROOT)/$(PKGROOT)/opal
+	mkdir -p $(ROOT)/$(PKGROOT)/deployed
+	install -m644  auto*_config.xml $(ROOT)/$(PKGROOT)/deployed
 
 build::
 	
