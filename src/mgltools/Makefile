@@ -51,7 +51,7 @@
 #
 # @Copyright@
 
-PKGROOT = /opt/cadd/mgltools
+PKGROOT = /opt/mgltools
 
 REDHAT.ROOT = $(PWD)/../../
 -include $(ROCKSROOT)/etc/Rules.mk
@@ -60,7 +60,10 @@ include Rules.mk
 
 install::
 	mkdir -p $(ROOT)/$(PKGROOT)
-	( cd $(NAMEVERSION); ./install.sh -d $(ROOT)/$(PKGROOT) -c 1 )
+	mkdir -p $(PKGROOT)
+	mount --bind $(ROOT)/$(PKGROOT) $(PKGROOT);
+	( cd $(NAMEVERSION); ./install.sh -d $(PKGROOT) -c 1 )
+	umount $(PKGROOT)
 
 build: 
 	tar zxvf $(NAMEVERSION).tar.gz

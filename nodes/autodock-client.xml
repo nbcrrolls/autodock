@@ -18,5 +18,7 @@
 	<package>autodock</package>
 	<package>rocks-autodock</package>
         <package>autodock-vina</package>
+        <package>mgltools</package>
+
 
 </kickstart>
