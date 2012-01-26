@@ -52,6 +52,10 @@
 # @Copyright@
 #
 # $Log: Makefile,v $
+# Revision 1.2  2012/01/26 01:00:09  clem
+# Added mgltools to the autodock roll
+# Modified the path so all the products will get installed in /opt/mgltools
+#
 # Revision 1.1  2012/01/21 03:34:09  clem
 # First version of the new autodock roll.
 # Fixed some minor things and added autodock-vina.
@@ -83,7 +87,7 @@
 #
 #
 
-PKGROOT = /opt/mgl/
+PKGROOT = /opt/mgltools/
 
 REDHAT.ROOT = $(PWD)/../../
 -include $(ROCKSROOT)/etc/Rules.mk

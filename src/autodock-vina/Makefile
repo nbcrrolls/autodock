@@ -51,7 +51,7 @@
 #
 # @Copyright@
 
-PKGROOT = /opt/mgl/
+PKGROOT = /opt/mgltools/
 
 REDHAT.ROOT = $(PWD)/../../
 -include $(ROCKSROOT)/etc/Rules.mk

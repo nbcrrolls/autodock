@@ -54,12 +54,11 @@
 # @Copyright@
 
 ## instllation location 
-export AUTODOCK_ROOT="/opt/mgl"
-export AUTODOCK_BIN="/opt/mgl/bin"
-export AUTODOCK_UTI="/opt/mgl/util"
+export AUTODOCK_ROOT="/opt/mgltools"
+export AUTODOCK_BIN="/opt/mgltools/bin"
 
 ## add the path of the directory holding the programs and utilities
-export PATH="$PATH:$AUTODOCK_BIN:$AUTODOCK_UTI"
+export PATH="$PATH:$AUTODOCK_BIN"
 
 ulimit -s unlimited
 

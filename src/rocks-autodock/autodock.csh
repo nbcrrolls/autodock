@@ -54,11 +54,11 @@
 # @Copyright@
 
 ## installation location 
-setenv AUTODOCK_ROOT /opt/mgl
-setenv AUTODOCK_BIN /opt/mgl/bin
-setenv AUTODOCK_UTI /opt/mgl/util
+setenv AUTODOCK_ROOT /opt/mgltools
+setenv AUTODOCK_BIN /opt/mgltools/bin
+#setenv AUTODOCK_UTI /opt/mgltools/util
 
 ## add the path of the directory holding the programs and utilities
-set path=($path $AUTODOCK_BIN $AUTODOCK_UTI)
+set path=($path $AUTODOCK_BIN) 
 
 limit stacksize unlimited

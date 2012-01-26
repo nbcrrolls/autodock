@@ -71,6 +71,6 @@
     </types>
 
   </metadata>
-  <binaryLocation>/opt/mgl/bin/autogrid4</binaryLocation>
+  <binaryLocation>/opt/mgltools/bin/autogrid4</binaryLocation>
   <parallel>false</parallel>
 </appConfig>
