@@ -63,6 +63,10 @@ install::
 	mkdir -p $(PKGROOT)
 	mount --bind $(ROOT)/$(PKGROOT) $(PKGROOT);
 	( cd $(NAMEVERSION); ./install.sh -d $(PKGROOT) -c 1 )
+	#remove libstdc from mgltools rpm package if not
+	#yum is going crazy and is not installing the system 
+	#stdc++
+	rm /opt/mgltools/lib/libstdc++.so.6*
 	umount $(PKGROOT)
 
 build: 
