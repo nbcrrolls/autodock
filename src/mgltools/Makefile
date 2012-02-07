@@ -52,6 +52,9 @@
 # @Copyright@
 
 PKGROOT = /opt/mgltools
+TARNAME = mgltools_x86_64Linux2_nightly_20110111
+DIRNAME = mgltools_x86_64Linux2_latest
+CADDBASEPATH = $(PKGROOT)/MGLToolsPckgs/CADD
 
 REDHAT.ROOT = $(PWD)/../../
 -include $(ROCKSROOT)/etc/Rules.mk
@@ -62,15 +65,19 @@ install::
 	mkdir -p $(ROOT)/$(PKGROOT)
 	mkdir -p $(PKGROOT)
 	mount --bind $(ROOT)/$(PKGROOT) $(PKGROOT);
-	( cd $(NAMEVERSION); ./install.sh -d $(PKGROOT) -c 1 )
+	( cd $(DIRNAME); ./install.sh -d $(PKGROOT) -c 1 )
 	#remove libstdc from mgltools rpm package if not
 	#yum is going crazy and is not installing the system 
 	#stdc++
-	rm /opt/mgltools/lib/libstdc++.so.6*
+	rm $(PKGROOT)/lib/libstdc++.so.6*
+	#apply patch to workflow
+	rm -rf $(CADDBASEPATH)/workflows
+	cd patch-files && find . -type f | grep -v CVS | cpio -pduv $(CADDBASEPATH)
+	#change service name
 	umount $(PKGROOT)
 
 build: 
-	tar zxvf $(NAMEVERSION).tar.gz
+	tar zxvf $(TARNAME).tar.gz
 
 clean::
 	rm -rf $(NAMEVERSION)
