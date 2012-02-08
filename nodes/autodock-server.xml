@@ -32,6 +32,8 @@ if test -d /opt/opal; then
   su tomcat -c "ant deploy -DserviceName=Autodock -DappConfig=/opt/mgl/opal/autodock_config.xml"
 fi
 
+
+
 </post>
 
 </kickstart>

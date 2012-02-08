@@ -54,7 +54,7 @@
 PKGROOT = /opt/mgltools
 TARNAME = mgltools_x86_64Linux2_nightly_20110111
 DIRNAME = mgltools_x86_64Linux2_latest
-CADDBASEPATH = $(PKGROOT)/MGLToolsPckgs/CADD
+MGLBASEPATH = $(PKGROOT)/MGLToolsPckgs
 
 REDHAT.ROOT = $(PWD)/../../
 -include $(ROCKSROOT)/etc/Rules.mk
@@ -71,8 +71,9 @@ install::
 	#stdc++
 	rm $(PKGROOT)/lib/libstdc++.so.6*
 	#apply patch to workflow
-	rm -rf $(CADDBASEPATH)/workflows
-	cd patch-files && find . -type f | grep -v CVS | cpio -pduv $(CADDBASEPATH)
+	rm -rf $(MGLBASEPATH)/CADD/workflows
+	rm -rf $(MGLBASEPATH)/AutoDockTools/VisionInterface/Adt/Macro
+	cd patch-files && find . -type f | grep -v CVS | cpio -pduv $(MGLBASEPATH)
 	#change service name
 	umount $(PKGROOT)
 
