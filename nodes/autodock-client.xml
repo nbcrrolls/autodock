@@ -21,4 +21,11 @@
         <package>mgltools</package>
 
 
+
+<post>
+
+SERVERNAME=&Kickstart_PublicHostname;
+/opt/mgltools/bin/renameOpalService.sh $SERVERNAME &amp;&gt; /tmp/renameOpalService.log
+
+</post>
 </kickstart>
