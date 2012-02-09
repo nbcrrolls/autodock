@@ -1,32 +1,17 @@
 <chapter id="using" xreflabel="Using Autodock">
-<title>Using Autodock</title>
-
-<section id="using-autodock-locally" xreflabel="Local Installation">
-<title>Local Installation</title>
+<title>Using Autodock Roll</title>
 
 <para>
-Click <ulink url="http://autodock.scripps.edu/faqs-help/tutorial/using-autodock4-for-virtual-screening/UsingAutoDock4forVirtualScreening_v4.pdf">
-here</ulink> for an excellent tutorial on how to set up AutoGrid 4 grid map calculations,
-how to set up AutoDock 4 dockings, how to analyze docking results, etc.
+Autodock, Autodock-vina, and MGLTools executable can be found in /opt/mgltools/bin, 
+you can execute them simply by typing the command in your shell (the path is automatically 
+added by the roll).
 </para>
 
 
 <para>
-Please visit <ulink url="http://autodock.scripps.edu/references">here</ulink>
-for more Autodock/Autogrid references.
+
+Please refer to the various product official web site for further documentation. 
 </para>
 
-</section>
-
-<section id="using-autodock-webservice" xreflabel="Web Service">
-<title>Web Service</title>
-
-<para>
-You may run Autodock/Autogrid remotely using this easy-to-use
-<ulink url="http://ws.nbcr.net/opal2/GetServicesList.do">webservice</ulink>.
-</para>
-
-
-</section>
 
 </chapter>

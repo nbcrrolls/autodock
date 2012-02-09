@@ -3,43 +3,13 @@
 
 <section id="rocks" xreflabel="Rocks">
 <title>Rocks Roll</title>
-
 <para>
 The Autodock Roll is for use with Rocks @ROCKS_VERSION@.
 </para>
 
 <para>
 The Autodock roll does not have any prerequisite rolls.
-However, it is recommended that you install the 
-<ulink url="http://nbcr.net/software/doc/mgl-roll/">MGL roll</ulink>
-which includes AutodockTools, Python Molecular Viewer and Vision. 
-AutoDockTools is graphical front-end for setting up and running AutoDock.
 </para>
-
 </section>
-
-<section id="prerequisites_autodock_tarball" xreflabel="Prerequisites for Autodock Tarball">
-<title>Tarballs</title>
-
-<para>
-Read this section only if you have decided to install Autodock from 
-the tarballs instead of the roll.
-</para>
-
-<itemizedlist>
-<listitem><para>
-If you are going to install Autodock from source instead of binaries, then you will need a C++ compiler.
-</para></listitem>
-<listitem><para>
-If you are going to install Autodock on Windows, then you will need 
-<ulink url="http://www.cygwin.com/">Cygwin</ulink>.
-</para></listitem>
-<listitem><para>
-Otherwise, there will be no prerequisites.
-</para></listitem>
-</itemizedlist>
-
-</section>
-
 
 </chapter>

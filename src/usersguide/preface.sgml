@@ -3,9 +3,18 @@
 
 
 <para>
-Please visit the <ulink url="http://www.scripps.edu/mb/olson/doc/autodock/">
-AutoDock site</ulink> to learn more about their release and the individual
-software components.
+This roll contains: 
 </para>
+<itemizedlist>
+<listitem><para>
+<ulink url="http://autodock.scripps.edu"> AutoDock </ulink> version 4.2.1
+</para></listitem>
+<listitem><para>
+<ulink url="http://vina.scripps.edu">Autodock Vina</ulink> version 1.1.2
+</para></listitem>
+<listitem><para>
+<ulink url="http://mgltools.scripps.edu/">MGLTools</ulink> nightly built 20110111 
+</para></listitem>
+</itemizedlist>
 
 </preface>
