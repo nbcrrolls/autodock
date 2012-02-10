@@ -73,7 +73,7 @@ install::
 	#apply patch to workflow
 	rm -rf $(MGLBASEPATH)/CADD/workflows
 	rm -rf $(MGLBASEPATH)/AutoDockTools/VisionInterface/Adt/Macro
-	cd patch-files && find . -type f | grep -v CVS | cpio -pduv $(MGLBASEPATH)
+	cd patch-files && find . -type f | grep -v CVS | cpio -pduv $(MGLBASEPATH)/CADD
 	#script to change server used by opal node in vision
 	cp renameOpalService.sh $(PKGROOT)/bin/renameOpalService.sh
 	chmod +x $(PKGROOT)/bin/renameOpalService.sh

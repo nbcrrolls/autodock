@@ -59,6 +59,12 @@ SRCDIRS = `find . -maxdepth 1 -type d -not -name CVS -not -name .svn -not -name 
 default:	rpm
 
 copyright rpm clean::
+	echo ciao $@
 	for i in $(SRCDIRS) ; do \
-		(cd $$i; make $@) ; \
+		cd $$i; \
+		$(MAKE) $@ || exit 2 ; \
+		cd ..; \
 	done
+
+
+
