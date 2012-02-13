@@ -13,9 +13,9 @@
 #  
 #########################################################################
 #
-# $Header: /home/cvs/CVSROOT/nbcr/src/roll/autodock/src/mgltools/patch-files/AutoDockTools/VisionInterface/Adt/Macro/Attic/PrepareReceptor.py,v 1.1 2012/02/08 02:13:05 clem Exp $
+# $Header: /home/cvs/CVSROOT/nbcr/src/roll/autodock/src/mgltools/patch-files/AutoDockTools/VisionInterface/Adt/Macro/Attic/PrepareReceptor.py,v 1.2 2012/02/13 20:01:58 clem Exp $
 #
-# $Id: PrepareReceptor.py,v 1.1 2012/02/08 02:13:05 clem Exp $
+# $Id: PrepareReceptor.py,v 1.2 2012/02/13 20:01:58 clem Exp $
 #
 
 from NetworkEditor.macros import MacroNode
@@ -122,13 +122,11 @@ class PrepareReceptor(MacroNode):
             CheckFileFormat_6.configure(function=code)
             apply(CheckFileFormat_6.configure, (), {'paramPanelImmediate': 1, 'expanded': False})
             from NetworkEditor.items import FunctionNode
-            Pdb2pqrOpalService_ws_nbcr_net_7 = FunctionNode(functionOrString='Pdb2pqrOpalService_ws_nbcr_net', host="http://ws.nbcr.net/opal2", namedArgs={'noopt': False, 'phi': False, 'psi': False, 'verbose': True, 'chain': False, 'nodebump': False, 'chi': False, 'output_file': '', 'ligand': '', 'hbond': False, 'inFile': '', 'with_ph': '', 'forcefield': 'AMBER', 'clean': False, 'inId': '', 'apbs_input': False, 'ffout': '', 'localRun': False, 'rama': False, 'execPath': '', 'assign_only': False}, constrkw={'functionOrString': "'Pdb2pqrOpalService_ws_nbcr_net'", 'host': '"http://ws.nbcr.net/opal2"', 'namedArgs': {'noopt': False, 'phi': False, 'psi': False, 'verbose': True, 'chain': False, 'nodebump': False, 'chi': False, 'output_file': '', 'ligand': '', 'hbond': False, 'inFile': '', 'with_ph': '', 'forcefield': 'AMBER', 'clean': False, 'inId': '', 'apbs_input': False, 'ffout': '', 'localRun': False, 'rama': False, 'execPath': '', 'assign_only': False}}, name='Pdb2pqrOpalService_ws_nbcr_net', library=wslib)
+            Pdb2pqrOpalService_ws_nbcr_net_7 = FunctionNode(functionOrString='Pdb2pqrOpalService_ws_nbcr_net', host="http://ws.nbcr.net/opal2", namedArgs={'noopt': False, 'verbose': True, 'chain': False, 'nodebump': False, 'chi': False, 'output_file': '', 'ligand': '', 'hbond': False, 'inFile': '', 'with_ph': '', 'forcefield': 'AMBER', 'clean': False, 'inId': '', 'apbs_input': False, 'ffout': '', 'localRun': False, 'rama': False, 'execPath': '', 'assign_only': False}, constrkw={'functionOrString': "'Pdb2pqrOpalService_ws_nbcr_net'", 'host': '"http://ws.nbcr.net/opal2"', 'namedArgs': {'noopt': False, 'verbose': True, 'chain': False, 'nodebump': False, 'chi': False, 'output_file': '', 'ligand': '', 'hbond': False, 'inFile': '', 'with_ph': '', 'forcefield': 'AMBER', 'clean': False, 'inId': '', 'apbs_input': False, 'ffout': '', 'localRun': False, 'rama': False, 'execPath': '', 'assign_only': False}}, name='Pdb2pqrOpalService_ws_nbcr_net', library=wslib)
             Pdb2pqrWS_3.macroNetwork.addNode(Pdb2pqrOpalService_ws_nbcr_net_7,99,115)
             apply(Pdb2pqrOpalService_ws_nbcr_net_7.inputPortByName['output_file'].configure, (), {'defaultValue': None, 'required': True})
             apply(Pdb2pqrOpalService_ws_nbcr_net_7.inputPortByName['inFile'].configure, (), {'defaultValue': None, 'required': True})
             Pdb2pqrOpalService_ws_nbcr_net_7.inputPortByName['noopt'].widget.set(0, run=False)
-            Pdb2pqrOpalService_ws_nbcr_net_7.inputPortByName['phi'].widget.set(0, run=False)
-            Pdb2pqrOpalService_ws_nbcr_net_7.inputPortByName['psi'].widget.set(0, run=False)
             Pdb2pqrOpalService_ws_nbcr_net_7.inputPortByName['verbose'].widget.set(1, run=False)
             Pdb2pqrOpalService_ws_nbcr_net_7.inputPortByName['chain'].widget.set(0, run=False)
             Pdb2pqrOpalService_ws_nbcr_net_7.inputPortByName['nodebump'].widget.set(0, run=False)
