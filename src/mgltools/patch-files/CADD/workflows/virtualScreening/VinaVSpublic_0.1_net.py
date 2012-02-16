@@ -14,9 +14,9 @@
 #  
 #########################################################################
 #
-# $Header: /home/cvs/CVSROOT/nbcr/src/roll/autodock/src/mgltools/patch-files/CADD/workflows/virtualScreening/Attic/VinaVSpublic_0.1_net.py,v 1.1 2012/02/14 20:26:28 clem Exp $
+# $Header: /home/cvs/CVSROOT/nbcr/src/roll/autodock/src/mgltools/patch-files/CADD/workflows/virtualScreening/Attic/VinaVSpublic_0.1_net.py,v 1.2 2012/02/16 01:57:40 clem Exp $
 #
-# $Id: VinaVSpublic_0.1_net.py,v 1.1 2012/02/14 20:26:28 clem Exp $
+# $Id: VinaVSpublic_0.1_net.py,v 1.2 2012/02/16 01:57:40 clem Exp $
 #
 
 
@@ -233,11 +233,9 @@ try:
     output_Ports_23 = Vina_21.macroNetwork.opNode
     apply(output_Ports_23.configure, (), {'paramPanelImmediate': 1, 'expanded': False})
     from NetworkEditor.items import FunctionNode
-    AutodockVina_Screening_kryptonite_nbcr_net_24 = FunctionNode(functionOrString='AutodockVina_Screening_kryptonite_nbcr_net', host="http://kryptonite.nbcr.net/opal2", namedArgs={'num_modes': '', 'energy_range': '', 'seed': '', 'receptor': '', 'size_y': '', 'size_z': '', 'out': '', 'log': '', 'urllib': '', 'exhaustiveness': '', 'localRun': False, 'flex': '', 'center_z': '', 'center_x': '', 'center_y': '', 'userlib': '', 'size_x': '', 'config': '', 'filter': '', 'ligand_db': '', 'cpu': '', 'execPath': ''}, constrkw={'functionOrString': "'AutodockVina_Screening_kryptonite_nbcr_net'", 'host': '"http://kryptonite.nbcr.net/opal2"', 'namedArgs': {'num_modes': '', 'energy_range': '', 'seed': '', 'receptor': '', 'size_y': '', 'size_z': '', 'out': '', 'log': '', 'urllib': '', 'exhaustiveness': '', 'localRun': False, 'flex': '', 'center_z': '', 'center_x': '', 'center_y': '', 'userlib': '', 'size_x': '', 'config': '', 'filter': '', 'ligand_db': '', 'cpu': '', 'execPath': ''}}, name='AutodockVina_Screening_kryptonite_nbcr_net', library=wslib)
+    AutodockVina_Screening_kryptonite_nbcr_net_24 = FunctionNode(functionOrString='AutodockVina_Screening_kryptonite_nbcr_net', host="http://kryptonite.nbcr.net/opal2", namedArgs={'num_modes': '', 'energy_range': '', 'seed': '', 'receptor': '', 'size_y': '', 'size_z': '', 'out': '', 'log': '', 'exhaustiveness': '', 'localRun': False, 'flex': '', 'center_z': '', 'center_x': '', 'center_y': '', 'size_x': '', 'config': '', 'filter': '', 'ligand_db': '', 'cpu': '', 'execPath': ''}, constrkw={'functionOrString': "'AutodockVina_Screening_kryptonite_nbcr_net'", 'host': '"http://kryptonite.nbcr.net/opal2"', 'namedArgs': {'num_modes': '', 'energy_range': '', 'seed': '', 'receptor': '', 'size_y': '', 'size_z': '', 'out': '', 'log': '', 'exhaustiveness': '', 'localRun': False, 'flex': '', 'center_z': '', 'center_x': '', 'center_y': '', 'size_x': '', 'config': '', 'filter': '', 'ligand_db': '', 'cpu': '', 'execPath': ''}}, name='AutodockVina_Screening_kryptonite_nbcr_net', library=wslib)
     Vina_21.macroNetwork.addNode(AutodockVina_Screening_kryptonite_nbcr_net_24,217,185)
     apply(AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['receptor'].configure, (), {'defaultValue': None})
-    apply(AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['urllib'].configure, (), {'defaultValue': None})
-    apply(AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['userlib'].configure, (), {'defaultValue': None})
     apply(AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['config'].configure, (), {'defaultValue': None, 'required': True})
     apply(AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['filter'].configure, (), {'defaultValue': None})
     apply(AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['num_modes'].widget.configure, (), {'choices': ('1', '2', '3', '4', '5', '6', '7', '8', '9', '10')})
@@ -252,9 +250,9 @@ try:
     AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['size_z'].widget.set(r"", run=False)
     AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['out'].widget.set(r"", run=False)
     AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['log'].widget.set(r"", run=False)
-    AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['urllib'].rebindWidget()
-    AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['urllib'].widget.set(r"", run=False)
-    AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['urllib'].unbindWidget()
+    AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['ligand_db'].rebindWidget()
+    AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['ligand_db'].widget.set(r"", run=False)
+    AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['ligand_db'].unbindWidget()
     apply(AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['exhaustiveness'].widget.configure, (), {'choices': ('1', '2', '3', '4', '5', '6', '7', '8')})
     AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['exhaustiveness'].widget.set(r"", run=False)
     AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['localRun'].widget.set(0, run=False)
@@ -262,7 +260,6 @@ try:
     AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['center_z'].widget.set(r"", run=False)
     AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['center_x'].widget.set(r"", run=False)
     AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['center_y'].widget.set(r"", run=False)
-    AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['userlib'].widget.set(r"", run=False)
     AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['size_x'].widget.set(r"", run=False)
     AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['config'].rebindWidget()
     AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['config'].widget.set(r"", run=False)
@@ -270,8 +267,6 @@ try:
     AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['filter'].rebindWidget()
     AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['filter'].widget.set(r"", run=False)
     AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['filter'].unbindWidget()
-    apply(AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['ligand_db'].widget.configure, (), {'choices': ('sample', 'NCIDS_SC', )})
-    AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['ligand_db'].widget.set(r"", run=False)
     apply(AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['cpu'].widget.configure, (), {'choices': ('1', '2')})
     AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['cpu'].widget.set(r"", run=False)
     AutodockVina_Screening_kryptonite_nbcr_net_24.inputPortByName['execPath'].widget.set(r"", run=False)
@@ -328,7 +323,7 @@ try:
     if PrepareVinaInputs_25 is not None and AutodockVina_Screening_kryptonite_nbcr_net_24 is not None:
         try:
             Vina_21.macroNetwork.connectNodes(
-                PrepareVinaInputs_25, AutodockVina_Screening_kryptonite_nbcr_net_24, "ligand_lib", "urllib", blocking=True
+                PrepareVinaInputs_25, AutodockVina_Screening_kryptonite_nbcr_net_24, "ligand_lib", "ligand_db", blocking=True
                 , splitratio=[0.61963739449043087, 0.74955133389937689])
         except:
             print "WARNING: failed to restore connection between PrepareVinaInputs_25 and AutodockVina_Screening_kryptonite_nbcr_net_24 in network Vina_21.macroNetwork"
