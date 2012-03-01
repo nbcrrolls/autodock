@@ -27,11 +27,9 @@
  
 if test -d /opt/opal; then
   cd /opt/opal
-  
-  su tomcat -c "ant deploy -DserviceName=Autogrid -DappConfig=/opt/mgl/opal/autogrid_config.xml"
-  su tomcat -c "ant deploy -DserviceName=Autodock -DappConfig=/opt/mgl/opal/autodock_config.xml"
+  su tomcat -c "ant deploy -DserviceName=Autogrid -DappConfig=/opt/opal/deployed/autogrid_config.xml"
+  su tomcat -c "ant deploy -DserviceName=Autodock -DappConfig=/opt/opal/deployed/autodock_config.xml"
 fi
-
 
 SERVERNAME=&Kickstart_PublicHostname;
 /opt/mgltools/bin/renameOpalService.sh $SERVERNAME &amp;&gt; /tmp/renameOpalService.log
