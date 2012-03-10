@@ -14,9 +14,9 @@
 #  
 #########################################################################
 #
-# $Header: /home/cvs/CVSROOT/nbcr/src/roll/autodock/src/mgltools/patch-files/CADD/workflows/MDanalysis/Attic/GROMOSClustering_0.1_net.py,v 1.1 2012/02/14 20:26:20 clem Exp $
+# $Header: /home/cvs/CVSROOT/nbcr/src/roll/autodock/src/mgltools/patch-files/CADD/workflows/MDanalysis/Attic/GROMOSClustering_0.1_net.py,v 1.2 2012/03/10 01:45:34 clem Exp $
 #
-# $Id: GROMOSClustering_0.1_net.py,v 1.1 2012/02/14 20:26:20 clem Exp $
+# $Id: GROMOSClustering_0.1_net.py,v 1.2 2012/03/10 01:45:34 clem Exp $
 #
 
 
@@ -71,7 +71,7 @@ try:
     GROMOS_ClusterFiles_kryptonite_nbcr_net_3 = GromosCluster_0.macroNetwork.nodes[2]
     GROMOS_ClusterFiles_kryptonite_nbcr_net_3.inputPortByName['expert_options'].widget.set(r"", run=False)
     GROMOS_ClusterFiles_kryptonite_nbcr_net_3.inputPortByName['prefix'].widget.set(r"", run=False)
-    GROMOS_ClusterFiles_kryptonite_nbcr_net_3.inputPortByName['default_options'].widget.set(r"-o -g -dist -ev -sz -tr -ntr -clid -cl", run=False)
+    GROMOS_ClusterFiles_kryptonite_nbcr_net_3.inputPortByName['default_options'].widget.set(r"-o -g -dist -ev -sz -ntr -clid -cl", run=False)
     GROMOS_ClusterFiles_kryptonite_nbcr_net_3.inputPortByName['localRun'].widget.set(0, run=False)
     apply(GROMOS_ClusterFiles_kryptonite_nbcr_net_3.inputPortByName['method'].widget.configure, (), {'choices': ('gromos', 'linkage', 'jarvis-patrick', 'monte-carlo', 'diagonalization')})
     GROMOS_ClusterFiles_kryptonite_nbcr_net_3.inputPortByName['method'].widget.set(r"gromos", run=False)
