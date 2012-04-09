@@ -62,7 +62,8 @@ version.mk: version.mk.in
 
 install::
 	mkdir -p $(ROOT)/$(PKGROOT)/deployed
-	install -m644  auto*_config.xml $(ROOT)/$(PKGROOT)/deployed
+	install -m644  autodock_config.xml $(ROOT)/$(PKGROOT)/deployed/autodock_$(AUTOPROGVER).xml
+	install -m644  autogrid_config.xml $(ROOT)/$(PKGROOT)/deployed/autogrid_$(AUTOPROGVER).xml
 
 build::
 	

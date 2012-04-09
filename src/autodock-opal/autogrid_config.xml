@@ -1,7 +1,7 @@
 <appConfig xmlns="http://nbcr.sdsc.edu/opal/types"
            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <metadata appName="Autogrid">
-    <usage><![CDATA[AutoGrid pre-calculates the grids used by Autodock. Version 4.0.1.]]></usage>
+  <metadata appName="Autogrid 4.2.3">
+    <usage><![CDATA[AutoGrid pre-calculates the grids used by Autodock. Version 4.2.3.]]></usage>
     <info>
     <![CDATA[
 
