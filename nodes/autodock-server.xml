@@ -26,9 +26,28 @@
 <post>
  
 if test -d /opt/opal; then
+
+<file name="/opt/opal/deployed/deploy.sh" mode="append">
+
+# autodock 4
+autodockver=4.2.3
+autodock_bin=/opt/cadd/bin/run_autodock.py
+if test -e $autodock_bin; then
+    $ANT -f $OPALXML deploy -DserviceName=autodock_${autodockver} -DappConfig=$OPALCONFIG/autodock_$autodockver.xml
+fi
+
+# autogrid 4
+autogridver=4.2.3
+autogrid_bin=/opt/mgltools/bin/autogrid4
+if test -e $autogrid_bin; then
+    $ANT -f $OPALXML deploy -DserviceName=autogrid_${autogridver} -DappConfig=$OPALCONFIG/autogrid_$autogridver.xml
+fi
+
+</file>
+
   cd /opt/opal
-  su tomcat -c "ant deploy -DserviceName=Autogrid -DappConfig=/opt/opal/deployed/autogrid_config.xml"
-  su tomcat -c "ant deploy -DserviceName=Autodock -DappConfig=/opt/opal/deployed/autodock_config.xml"
+  su tomcat -c "ant deploy -DserviceName=Autogrid -DappConfig=/opt/opal/deployed/autogrid_4.2.3.xml"
+  su tomcat -c "ant deploy -DserviceName=Autodock -DappConfig=/opt/opal/deployed/autodock_4.2.3.xml"
 fi
 
 SERVERNAME=&Kickstart_PublicHostname;
