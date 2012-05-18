@@ -62,13 +62,13 @@ version.mk: version.mk.in
 
 install::
 	mkdir -p $(ROOT)/$(PKGROOT)
-	( cd $(NAMEVERSION)/src/autodock;  make prefix=$(ROOT)/$(PKGROOT) install )
-	( cd $(NAMEVERSION)/src/autogrid;  make prefix=$(ROOT)/$(PKGROOT) install )
+	( cd src/autodock;  make prefix=$(ROOT)/$(PKGROOT) install )
+	( cd src/autogrid;  make prefix=$(ROOT)/$(PKGROOT) install )
 
 build: 
 	tar zxvf $(NAMEVERSION)-src.tar.gz
-	( cd $(NAMEVERSION)/src/autodock; ./configure --prefix=$(PKGROOT); make; )
-	( cd $(NAMEVERSION)/src/autogrid; ./configure --prefix=$(PKGROOT); make; )
+	( cd src/autodock; ./configure --prefix=$(PKGROOT); make; )
+	( cd src/autogrid; ./configure --prefix=$(PKGROOT); make; )
 
 clean::
 	rm -rf $(NAMEVERSION)
