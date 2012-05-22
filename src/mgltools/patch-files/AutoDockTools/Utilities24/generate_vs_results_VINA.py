@@ -95,7 +95,7 @@ if __name__ == '__main__':
     rmsTol = 2.0
     mode = 1 # binding modes extracted from the result 
     pattern = "*_out.pdbqt"
-    header = "#name\tenergy\tligand_efficiency\ttotal_poses\tfilename\n"
+    header = "#name\tenergy\tligand_efficiency\ttotal_poses\treceptor\tfilename\n"
     suffix = "_Vina_VS"
     hbtol = 0.0
 
@@ -210,6 +210,7 @@ if __name__ == '__main__':
         if doInteractions: print "[ interactions are calculated ]"
         else: print "[ interactions are NOT calculated ]"
     c = 0
+    recname = os.path.basename(receptor)
     for l in input_files:
         try:
             c+=1
@@ -230,8 +231,8 @@ if __name__ == '__main__':
             fp.write(pdbqt)
             fp.close()
 
-            out_line = "%s\t%2.3f\t%2.3f\t%d\t%s\n" % ( lig.ligName, lig.results[0]['energy'],
-                                               lig.results[0]['leff'], len(lig.poses), l)
+            out_line = "%s\t%2.3f\t%2.3f\t%d\t%s\t%s\n" % ( lig.ligName, lig.results[0]['energy'],
+                                               lig.results[0]['leff'], len(lig.poses), recname, l)
 
             if '-l' in opts:
                 print "\r- processing ... [ %d | %d  ]                     " % (c, len(input_files)),
