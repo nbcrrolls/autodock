@@ -17,8 +17,16 @@
 	
 	</changelog>
 
-	<edge from="server" to="autodock-server"/>
 	<edge from="client" to="autodock-client"/>
+
+	<!-- opal deployment -->
+	<edge from="client" to="autodock-server" cond="opal_server"/>
+	<edge from="server" to="autodock-server"/>
+	
+	<order head="opal-common">
+		<tail>autodock-server</tail>
+	</order>
+
 
 </graph>
 

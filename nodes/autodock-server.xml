@@ -15,11 +15,7 @@
 	
 	</changelog>
 
-	<package>autodock</package>
         <package>autodock-opal</package>
-        <package>autodock-vina</package>
-	<package>mgltools</package>
-	<package>rocks-autodock</package>
 	<package>autodock-examples</package>
 	<package>roll-autodock-usersguide</package>
 
