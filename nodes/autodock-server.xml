@@ -41,9 +41,6 @@ fi
 
 </file>
 
-  cd /opt/opal
-  su tomcat -c "ant deploy -DserviceName=Autogrid -DappConfig=/opt/opal/deployed/autogrid_4.2.3.xml"
-  su tomcat -c "ant deploy -DserviceName=Autodock -DappConfig=/opt/opal/deployed/autodock_4.2.3.xml"
 fi
 
 SERVERNAME=&Kickstart_PublicHostname;
