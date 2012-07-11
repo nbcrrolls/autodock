@@ -1,0 +1,251 @@
+<appConfig xmlns="http://nbcr.sdsc.edu/opal/types"
+           xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata appName="Vina 1.1.2">
+    <usage><![CDATA[AutoDock Vina 1.1.2 (May 11, 2011).]]></usage>
+    <info>
+    <![CDATA[
+vina
+
+Input:
+  --receptor arg        rigid part of the receptor (PDBQT)
+  --flex arg            flexible side chains, if any (PDBQT)
+  --ligand arg          ligand (PDBQT)
+
+Search space (required):
+  --center_x arg        X coordinate of the center
+  --center_y arg        Y coordinate of the center
+  --center_z arg        Z coordinate of the center
+  --size_x arg          size in the X dimension (Angstroms)
+  --size_y arg          size in the Y dimension (Angstroms)
+  --size_z arg          size in the Z dimension (Angstroms)
+
+Output (optional):
+  --out arg             output models (PDBQT), the default is chosen based on 
+                        the ligand file name
+  --log arg             optionally, write log file
+
+Misc (optional):
+  --cpu arg                 the number of CPUs to use (the default is to try to
+                            detect the number of CPUs or, failing that, use 1)
+  --seed arg                explicit random seed
+  --exhaustiveness arg (=8) exhaustiveness of the global search (roughly 
+                            proportional to time): 1+
+  --num_modes arg (=9)      maximum number of binding modes to generate
+  --energy_range arg (=3)   maximum energy difference between the best binding 
+                            mode and the worst one displayed (kcal/mol)
+
+Configuration file (optional):
+  --config arg          the above options can be put here
+
+Information (optional):
+  --help                display usage summary
+  --help_advanced       display usage summary with advanced options
+  --version             display program version
+
+    ]]>
+    </info>
+
+  <types>
+    <!-- list of flags -->
+    <flags>
+    </flags>
+
+    <taggedParams>
+        <param>
+            <id>receptor</id>
+            <tag>--receptor</tag>
+            <ioType>INPUT</ioType>
+            <paramType>FILE</paramType>
+            <required>true</required>
+            <semanticType></semanticType>
+            <textDesc>Rigid part of the receptor (PDBQT) 
+            (&lt;A HREF=http://www.nbcr.net/ws_help/Vina_Serial/sample_inputs/1jsn_mod.pdbqt&gt;sample receptor&lt;/A&gt;)
+            </textDesc>
+        </param>
+        <param>
+            <id>flex</id>
+            <tag>--flex</tag>
+            <ioType>INPUT</ioType>
+            <paramType>FILE</paramType>
+            <required>false</required>
+            <semanticType></semanticType>
+            <textDesc>Flexible side chains, if any (PDBQT)</textDesc>
+        </param>
+        <param>
+            <id>ligand</id>
+            <tag>--ligand</tag>
+            <ioType>INPUT</ioType>
+            <paramType>FILE</paramType>
+            <required>true</required>
+            <semanticType></semanticType>
+            <textDesc>Ligand (PDBQT)
+            (&lt;A HREF=http://www.nbcr.net/ws_help/Vina_Serial/sample_inputs/SIAtoSIA2.pdbqt&gt;sample ligand&lt;/A&gt;)
+            </textDesc>
+        </param>
+        <param>
+            <id>config</id>
+            <tag>--config</tag>
+            <ioType>INPUT</ioType>
+            <paramType>FILE</paramType>
+            <required>false</required>
+            <semanticType></semanticType>
+            <textDesc>Configuration File (&lt;A HREF=http://www.nbcr.net/ws_help/Vina_Serial/sample_outputs/sia_1jsn.config&gt;sample configuration file)&lt;A&gt;</textDesc>
+        </param>
+        <param>
+            <id>center_x</id>
+            <tag>--center_x</tag>
+            <paramType>STRING</paramType>
+            <required>true</required>
+            <semanticType></semanticType>
+            <textDesc>X coordinate of the center</textDesc>
+        </param>
+        <param>
+            <id>center_y</id>
+            <tag>--center_y</tag>
+            <paramType>STRING</paramType>
+            <required>true</required>
+            <semanticType></semanticType>
+            <textDesc>Y coordinate of the center</textDesc>
+        </param>
+        <param>
+            <id>center_z</id>
+            <tag>--center_z</tag>
+            <paramType>STRING</paramType>
+            <required>true</required>
+            <semanticType></semanticType>
+            <textDesc>Z coordinate of the center</textDesc>
+        </param>
+        <param>
+            <id>size_x</id>
+            <tag>--size_x</tag>
+            <paramType>STRING</paramType>
+            <required>true</required>
+            <semanticType></semanticType>
+            <textDesc>Size in the X dimension (angstroms)</textDesc>
+        </param>
+        <param>
+            <id>size_y</id>
+            <tag>--size_y</tag>
+            <paramType>STRING</paramType>
+            <required>true</required>
+            <semanticType></semanticType>
+            <textDesc>Size in the Y dimension (angstroms)</textDesc>
+        </param>
+        <param>
+            <id>size_z</id>
+            <tag>--size_z</tag>
+            <paramType>STRING</paramType>
+            <required>true</required>
+            <semanticType></semanticType>
+            <textDesc>Size in the Z dimension (angstroms)</textDesc>
+        </param>
+        <param>
+            <id>out</id>
+            <tag>--out</tag>
+            <paramType>STRING</paramType>
+            <required>false</required>
+            <semanticType></semanticType>
+            <textDesc>Output models (PDBQT), the default is chosen based on the ligand file name</textDesc>
+        </param>
+        <param>
+            <id>log</id>
+            <tag>--log</tag>
+            <paramType>STRING</paramType>
+            <required>false</required>
+            <semanticType></semanticType>
+            <textDesc>Optionally, write log file</textDesc>
+        </param>
+        <param>
+            <id>seed</id>
+            <tag>--seed</tag>
+            <paramType>STRING</paramType>
+            <required>false</required>
+            <semanticType></semanticType>
+            <textDesc>Explicit random seed</textDesc>
+        </param>
+        <param>
+            <id>exhaustiveness</id>
+            <tag>--exhaustiveness</tag>
+            <paramType>STRING</paramType>
+            <required>false</required>
+            <value>1</value>
+            <value>2</value>
+            <value>3</value>
+            <value>4</value>
+            <value>5</value>
+            <value>6</value>
+            <value>7</value>
+            <value>8</value>
+            <semanticType></semanticType>
+            <textDesc>Exhaustiveness of the global search (roughly proptional to time): 1+</textDesc>
+        </param>
+        <param>
+            <id>num_modes</id>
+            <tag>--num_modes</tag>
+            <paramType>STRING</paramType>
+            <required>false</required>
+            <value>1</value>
+            <value>2</value>
+            <value>3</value>
+            <value>4</value>
+            <value>5</value>
+            <value>6</value>
+            <value>7</value>
+            <value>8</value>
+            <value>9</value>
+            <value>10</value>
+            <semanticType></semanticType>
+            <textDesc>Maximum number of binding modes to generate</textDesc>
+        </param>
+        <param>
+            <id>energy_range</id>
+            <tag>--energy_range</tag>
+            <paramType>STRING</paramType>
+            <required>false</required>
+            <value>1</value>
+            <value>2</value>
+            <value>3</value>
+            <semanticType></semanticType>
+            <textDesc>Maximum energy difference between the best binding mode and the worst one displayed (kcal/mol)</textDesc>
+        </param>
+    </taggedParams>
+
+    <!-- list of implicit parameters -->
+    <untaggedParams>
+    </untaggedParams>
+
+    <groups>
+      <group>
+        <name>config</name>
+        <elements>config</elements>
+        <textDesc>Configuration File</textDesc>
+      </group>
+      <group>
+        <name>input</name>
+        <elements>receptor flex ligand</elements>
+        <textDesc>Input</textDesc>
+      </group>
+      <group>
+        <name>search_space</name>
+        <elements>center_x center_y center_z size_x size_y size_z</elements>
+        <textDesc>Search Space</textDesc>
+      </group>
+      <group>
+        <name>output</name>
+        <elements>out log</elements>
+        <textDesc>Output (optional)</textDesc>
+      </group>
+      <group>
+        <name>misc</name>
+        <elements>cpu seed exhaustiveness num_modes energy_range</elements>
+        <textDesc>Misc (optional)</textDesc>
+      </group>
+    </groups>
+
+  </types>
+
+  </metadata>
+  <binaryLocation>/opt/mgltools/bin/vina</binaryLocation>
+  <defaultArgs>--cpu 1</defaultArgs> 
+  <parallel>false</parallel>
+</appConfig>

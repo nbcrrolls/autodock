@@ -39,6 +39,14 @@ if test -e $autogrid_bin; then
     $ANT -f $OPALXML deploy -DserviceName=autogrid_${autogridver} -DappConfig=$OPALCONFIG/autogrid_$autogridver.xml
 fi
 
+# vina 1.1.2
+vinaver=1.1.2
+vina_bin=/opt/mgltools/bin/vina
+if test -e $vina_bin; then
+    $ANT -f $OPALXML deploy -DserviceName=vina_${vinaver} -DappConfig=$OPALCONFIG/vina_$vinaver.xml
+fi
+
+
 </file>
 
 fi
