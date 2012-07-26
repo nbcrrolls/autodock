@@ -51,9 +51,6 @@ fi
 
 fi
 
-SERVERNAME=&Kickstart_PublicHostname;
-/opt/mgltools/bin/renameOpalService.sh $SERVERNAME &amp;&gt; /tmp/renameOpalService.log
-
 
 </post>
 
