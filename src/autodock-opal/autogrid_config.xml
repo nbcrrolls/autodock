@@ -1,15 +1,15 @@
 <appConfig xmlns="http://nbcr.sdsc.edu/opal/types"
            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata appName="Autogrid 4.2.3">
-    <usage><![CDATA[AutoGrid pre-calculates the grids used by Autodock. Version 4.2.3.]]></usage>
+    <usage><![CDATA[AutoGrid pre-calculates the grids used by Autodock. Version 4.2.3.
+    Tutorial: http://www.nbcr.net/data/docs/wshelp/autogrid/tutorial.txt
+    ]]></usage>
     <info>
     <![CDATA[
-
-          autogrid4 [opts] -p <parameter_file> -l log_file
-
- -p parameter_filename
--l log_filename
--o Use old PDBQ format, charge q in columns 55-61
+autogrid4 [opts] -p <parameter_file> -l log_file
+    -p parameter_filename
+    -l log_filename
+    -o Use old PDBQ format, charge q in columns 55-61
     ]]>
     </info>
     <types>
