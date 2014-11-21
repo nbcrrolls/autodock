@@ -20,38 +20,6 @@
 	<package>roll-autodock-usersguide</package>
 
 <post>
- 
-if test -d /opt/opal; then
-
-<file name="/opt/opal/deployed/deploy.sh" mode="append">
-
-# autodock 4
-autodockver=4.2.3
-autodock_bin=/opt/cadd/bin/run_autodock.py
-if test -e $autodock_bin; then
-    $ANT -f $OPALXML deploy -DserviceName=autodock_${autodockver} -DappConfig=$OPALCONFIG/autodock_$autodockver.xml
-fi
-
-# autogrid 4
-autogridver=4.2.3
-autogrid_bin=/opt/mgltools/bin/autogrid4
-if test -e $autogrid_bin; then
-    $ANT -f $OPALXML deploy -DserviceName=autogrid_${autogridver} -DappConfig=$OPALCONFIG/autogrid_$autogridver.xml
-fi
-
-# vina 1.1.2
-vinaver=1.1.2
-vina_bin=/opt/mgltools/bin/vina
-if test -e $vina_bin; then
-    $ANT -f $OPALXML deploy -DserviceName=vina_${vinaver} -DappConfig=$OPALCONFIG/vina_$vinaver.xml
-fi
-
-
-</file>
-
-fi
-
-
 </post>
 
 </kickstart>

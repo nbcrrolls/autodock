@@ -51,7 +51,7 @@
 #
 # @Copyright@
 
-PKGROOT = /opt/opal/
+PKGROOT = /opt/tomcat/
 
 REDHAT.ROOT = $(PWD)/../../
 -include $(ROCKSROOT)/etc/Rules.mk
