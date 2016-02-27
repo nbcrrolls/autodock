@@ -2,7 +2,7 @@
            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata appName="Autogrid 4.2.3">
     <usage><![CDATA[AutoGrid pre-calculates the grids used by Autodock. Version 4.2.3.
-    Tutorial: http://www.nbcr.net/data/docs/wshelp/autogrid/tutorial.txt
+    Tutorial: http://nbcr.ucsd.edu/data/docs/wshelp/autogrid/tutorial.txt
     ]]></usage>
     <info>
     <![CDATA[
