@@ -59,7 +59,7 @@ Information (optional):
             <required>true</required>
             <semanticType></semanticType>
             <textDesc>Rigid part of the receptor (PDBQT) 
-            (&lt;A HREF=http://www.nbcr.net/data/docs/wshelp/Vina_Serial/sample_inputs/1jsn_mod.pdbqt&gt;sample receptor&lt;/A&gt;)
+            (&lt;A HREF=http://nbcr.ucsd.edu/data/docs/wshelp/Vina_Serial/sample_inputs/1jsn_mod.pdbqt&gt;sample receptor&lt;/A&gt;)
             </textDesc>
         </param>
         <param>
@@ -79,7 +79,7 @@ Information (optional):
             <required>true</required>
             <semanticType></semanticType>
             <textDesc>Ligand (PDBQT)
-            (&lt;A HREF=http://www.nbcr.net/data/docs/wshelp/Vina_Serial/sample_inputs/SIAtoSIA2.pdbqt&gt;sample ligand&lt;/A&gt;)
+            (&lt;A HREF=http://nbcr.ucsd.edu/data/docs/wshelp/Vina_Serial/sample_inputs/SIAtoSIA2.pdbqt&gt;sample ligand&lt;/A&gt;)
             </textDesc>
         </param>
         <param>
@@ -89,7 +89,7 @@ Information (optional):
             <paramType>FILE</paramType>
             <required>false</required>
             <semanticType></semanticType>
-            <textDesc>Configuration File (&lt;A HREF=http://www.nbcr.net/data/docs/wshelp/Vina_Serial/sample_inputs/sia_1jsn.config&gt;sample configuration file)&lt;A&gt;</textDesc>
+            <textDesc>Configuration File (&lt;A HREF=http://nbcr.ucsd.edu/data/docs/wshelp/Vina_Serial/sample_inputs/sia_1jsn.config&gt;sample configuration file)&lt;A&gt;</textDesc>
         </param>
         <param>
             <id>center_x</id>
