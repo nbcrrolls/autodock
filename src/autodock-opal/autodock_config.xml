@@ -1,7 +1,8 @@
 <appConfig xmlns="http://nbcr.sdsc.edu/opal/types"
            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata appName="Autodock 4.2.3">
-    <usage><![CDATA[Autodock performs the docking of the ligand to a set of grids describing the target protein. Version 4.2.3.]]></usage>
+    <usage><![CDATA[Autodock performs the docking of the ligand to a set of grids describing the target protein. 
+            Tutorial: http://nbcr.ucsd.edu/data/docs/wshelp/Autodock Version 4.2.3.]]></usage>
     <info>
     <![CDATA[
      autodock -p <parameter.in>
