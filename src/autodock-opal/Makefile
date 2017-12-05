@@ -52,20 +52,22 @@
 # @Copyright@
 
 PKGROOT = /opt/opal/
+CADD = /opt/cadd/bin
 
 REDHAT.ROOT = $(PWD)/../../
 -include $(ROCKSROOT)/etc/Rules.mk
 include Rules.mk
 
 version.mk: version.mk.in
-	cat version.mk.in ../version.mk > version.mk
+	cat  ../version.mk version.mk.in > version.mk
 
 install::
 	mkdir -p $(ROOT)/$(PKGROOT)/deployed
 	install -m644  autodock_config.xml $(ROOT)/$(PKGROOT)/deployed/autodock_$(AUTOPROGVER).xml
 	install -m644  autogrid_config.xml $(ROOT)/$(PKGROOT)/deployed/autogrid_$(AUTOPROGVER).xml
 	install -m644  vina_config.xml $(ROOT)/$(PKGROOT)/deployed/vina_$(VINAVER).xml
-
+	mkdir -p $(ROOT)/$(CADD)
+	install -m755  vina.sh $(ROOT)/$(CADD)
 
 build::
 	

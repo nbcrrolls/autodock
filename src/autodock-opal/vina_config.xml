@@ -245,7 +245,7 @@ Information (optional):
   </types>
 
   </metadata>
-  <binaryLocation>/opt/mgltools/bin/vina</binaryLocation>
-  <defaultArgs>--cpu 1</defaultArgs> 
+  <binaryLocation>/opt/cadd/bin/vina.sh</binaryLocation>
+  <jobManagerFQCN>edu.sdsc.nbcr.opal.manager.ForkJobManager</jobManagerFQCN>
   <parallel>false</parallel>
 </appConfig>
